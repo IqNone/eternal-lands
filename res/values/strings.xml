@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Eternal Lands</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="username_empty_error">Username cannot be empty</string>
+    <string name="password_empty_error">Password cannot be empty</string>
+    <string name="connect_to_server_error">Could not connect to server</string>
+    <string name="authenticate_error">Bad username/password</string>
+    <string name="open_chat">open chat</string>
+    <string name="send_text">Send text</string>
+    <string name="confirm_logout">Are you sure you want to logout?</string>
+    <string name="send">Send</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="inventory">Inventory</string>
+    <string name="stats">Stats</string>
+    <string name="switch_view">Switch view</string>
+    <string name="actions">Actions</string>
+    <string name="accept">Accept</string>
+    <string name="predefine_credentials">Predefine credentials</string>
+    <string name="send_crash_reports">Send crash reports</string>
+    <string name="include_username">Include username</string>
+    <string name="include_extra">Include extra content</string>
+    <string name="enable_reports">Enable Reports</string>
+
+    <string name="inv_capacity">Load: %1$d/%2$d</string>
+    <string name="options">Options</string>
+    <string name="move_on_long_press">Move on long press</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="ELProgressBar">
+        <attr name="showText" format="boolean" />
+        <attr name="color" format="color"/>
+    </declare-styleable>
+</resources>

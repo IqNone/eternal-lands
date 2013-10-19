@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:selectable="false"
+        android:title="@string/predefine_credentials">
+
+        <EditTextPreference
+            android:title="@string/username"
+            android:key="username"/>
+
+        <EditTextPreference
+            android:title="@string/password"
+            android:key="password"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/options">
+
+        <CheckBoxPreference
+            android:title="@string/move_on_long_press"
+            android:key="enable_long_press"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/send_crash_reports">
+
+        <CheckBoxPreference
+            android:title="@string/enable_reports"
+            android:contentDescription="Support developing and enable this:)"
+            android:key="enable_reports"
+            android:defaultValue="false"/>
+
+        <CheckBoxPreference
+            android:title="@string/include_username"
+            android:key="reports_include_username"
+            android:dependency="enable_reports"/>
+
+        <CheckBoxPreference
+            android:title="@string/include_extra"
+            android:key="reports_include_extra"
+            android:dependency="enable_reports"
+            android:autoText="true"
+            android:contentDescription="current map, position..."
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

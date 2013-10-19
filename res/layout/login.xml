@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="20dp">
+
+    <TextView android:text="@string/username"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"/>
+
+    <EditText android:id="@+id/username"
+              android:text="Tepes"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:inputType="text"/>
+
+    <TextView android:text="@string/password"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"/>
+
+    <EditText android:id="@+id/password"
+              android:text="cristi1"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:password="true"
+              android:inputType="textPassword"/>
+
+    <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+        <ImageView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/login_button"
+                android:layout_marginRight="20dp"/>
+
+        <ImageView
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/settings_button"/>
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/loginError"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:textColor="#ff0000"/>
+</LinearLayout>
