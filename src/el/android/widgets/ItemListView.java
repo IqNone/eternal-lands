@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 public class ItemListView extends ScrollView{
@@ -27,7 +27,7 @@ public class ItemListView extends ScrollView{
 
         list = new LinearLayout(context);
         list.setOrientation(LinearLayout.VERTICAL);
-        list.setLayoutParams(new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT));
+        list.setLayoutParams(new ViewGroup.LayoutParams(MATCH_PARENT, WRAP_CONTENT));
 
         addView(list);
     }
@@ -57,7 +57,7 @@ public class ItemListView extends ScrollView{
         TextView textView = new TextView(getContext());
         textView.setText(item);
         textView.setOnClickListener(new TextViewClickListener(item, index));
-        textView.setLayoutParams(new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT));
+        textView.setLayoutParams(new ViewGroup.LayoutParams(MATCH_PARENT, WRAP_CONTENT));
 
         return textView;
     }

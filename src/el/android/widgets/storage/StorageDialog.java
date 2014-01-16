@@ -15,7 +15,7 @@ import el.actor.Item;
 import el.android.R;
 import el.android.widgets.*;
 
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static el.android.GameMetadata.CLIENT;
 
@@ -52,7 +52,7 @@ public class StorageDialog extends Dialog implements Invalidateable, ItemBag.Ite
 
     private View getBar(Context context) {
         RelativeLayout bar = new RelativeLayout(context);
-        bar.setLayoutParams(new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT));
+        bar.setLayoutParams(new ViewGroup.LayoutParams(MATCH_PARENT, WRAP_CONTENT));
 
         inventorySmall = new Inventory(context);
         inventorySmall.setLayoutParams(new RelativeLayout.LayoutParams(120, 90));

@@ -11,8 +11,7 @@ import el.android.R;
 import el.android.widgets.*;
 import el.android.widgets.storage.Storage;
 
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
-import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+import static android.view.ViewGroup.LayoutParams.*;
 import static el.android.GameMetadata.CLIENT;
 
 public class TradeDialog extends PopupWindow implements Invalidateable{
@@ -40,7 +39,7 @@ public class TradeDialog extends PopupWindow implements Invalidateable{
     public TradeDialog(Context context) {
         super(context, null, R.style.CustomDialogTheme);
 
-        setWidth(FILL_PARENT);
+        setWidth(MATCH_PARENT);
         setHeight(WRAP_CONTENT);
 
         LinearLayout content = new LinearLayout(context);
@@ -58,14 +57,14 @@ public class TradeDialog extends PopupWindow implements Invalidateable{
     }
 
     private ViewGroup.LayoutParams marginLayout(int left, int top, int right, int bottom) {
-        ViewGroup.MarginLayoutParams params = new LinearLayout.LayoutParams(FILL_PARENT, WRAP_CONTENT);
+        ViewGroup.MarginLayoutParams params = new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT);
         params.setMargins(left, top, right, bottom);
         return params;
     }
 
     private View getBar(Context context) {
         bar = new RelativeLayout(context);
-        bar.setLayoutParams(new ViewGroup.LayoutParams(FILL_PARENT, WRAP_CONTENT));
+        bar.setLayoutParams(new ViewGroup.LayoutParams(MATCH_PARENT, WRAP_CONTENT));
 
         inventorySmall = new Inventory(context);
         inventorySmall.setLayoutParams(new RelativeLayout.LayoutParams(100, 75));

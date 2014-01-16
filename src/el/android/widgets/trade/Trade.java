@@ -5,7 +5,7 @@ import android.widget.LinearLayout;
 import el.actor.Actor;
 import el.android.widgets.ItemBag;
 
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 public class Trade extends LinearLayout{
@@ -16,7 +16,7 @@ public class Trade extends LinearLayout{
         super(context);
 
         setOrientation(LinearLayout.HORIZONTAL);
-        setLayoutParams(new LinearLayout.LayoutParams(FILL_PARENT, WRAP_CONTENT));
+        setLayoutParams(new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT));
 
         mine = createBag("You");
         his = createBag("");
@@ -27,7 +27,7 @@ public class Trade extends LinearLayout{
 
     private TradeBag createBag(String owner) {
         TradeBag bag = new TradeBag(getContext());
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(FILL_PARENT, WRAP_CONTENT);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT);
         params.setMargins(2, 2, 2, 2);
         params.weight = 1;
         bag.setLayoutParams(params);

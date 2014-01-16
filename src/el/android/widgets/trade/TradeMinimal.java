@@ -5,7 +5,7 @@ import android.widget.LinearLayout;
 import el.actor.Actor;
 import el.android.widgets.ItemBag;
 
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 public class TradeMinimal extends LinearLayout {
@@ -16,7 +16,7 @@ public class TradeMinimal extends LinearLayout {
         super(context);
 
         setOrientation(LinearLayout.HORIZONTAL);
-        setLayoutParams(new LinearLayout.LayoutParams(FILL_PARENT, WRAP_CONTENT));
+        setLayoutParams(new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT));
 
         mine = createBag();
         his = createBag();
@@ -28,7 +28,7 @@ public class TradeMinimal extends LinearLayout {
     private ItemBag createBag() {
         ItemBag bag = new ItemBag(getContext());
         bag.setDimensions(4, 4);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(FILL_PARENT, WRAP_CONTENT);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT);
         params.setMargins(2, 2, 2, 2);
         params.weight = 1;
         bag.setLayoutParams(params);

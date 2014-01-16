@@ -12,7 +12,7 @@ import el.actor.Span;
 
 import java.util.List;
 
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 public class ConsoleView extends ScrollView {
@@ -24,7 +24,7 @@ public class ConsoleView extends ScrollView {
         super(context, attrs);
 
         textView = new ConsoleTextView(context);
-        textView.setLayoutParams(new LayoutParams(FILL_PARENT, WRAP_CONTENT));
+        textView.setLayoutParams(new LayoutParams(MATCH_PARENT, WRAP_CONTENT));
 
         addView(textView);
     }

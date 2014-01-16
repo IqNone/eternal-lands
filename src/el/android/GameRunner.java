@@ -1,19 +1,13 @@
 package el.android;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PowerManager;
-import android.preference.PreferenceManager;
 import android.view.Window;
-import android.view.WindowManager;
 import el.logging.Logger;
-import el.logging.LoggerFactory;
-import org.acra.ACRA;
-import org.acra.sender.EmailIntentSender;
 
+import static android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN;
+import static android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
 import static el.android.GameMetadata.CLIENT;
 import static el.android.GameMetadata.CONNECTION;
 
@@ -23,7 +17,6 @@ public abstract class GameRunner extends Activity {
     protected abstract void updateUI();
 
     private final Handler handler = new Handler();
-    private PowerManager.WakeLock wakeLock;
 
     private volatile boolean isShowing;
 
@@ -32,11 +25,8 @@ public abstract class GameRunner extends Activity {
         super.onCreate(savedInstanceState);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-        wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "Eternal Lands");
+        getWindow().setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN);
+        getWindow().addFlags(FLAG_KEEP_SCREEN_ON);
     }
 
     @Override
@@ -46,18 +36,6 @@ public abstract class GameRunner extends Activity {
         LOGGER.info("enter ui activity, starting the main loop");
         isShowing = true;
         new Thread(uiMainLoop).start();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        wakeLock.acquire();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        wakeLock.release();
     }
 
     @Override
