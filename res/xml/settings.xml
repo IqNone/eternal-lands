@@ -23,6 +23,14 @@
             android:key="enable_long_press"
             android:defaultValue="true"/>
 
+
+        <EditTextPreference
+            android:title="Max food amount"
+            android:numeric="integer"
+            android:inputType="number"
+            android:key="max_food_amount"
+            android:defaultValue="45"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/send_crash_reports">
