@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="basic_attributes_title">Basic Attributes</string>
+    <string name="cross_attributes_title">Cross Attributes</string>
+    <string name="nexus_attributes_title">Nexus</string>
+    <string name="skill_attributes_title">Skills</string>
+
+    <!--Basic attribute string resources-->
+    <string name="physique">Physique</string>
+    <string name="coordination">Coordination</string>
+    <string name="reasoning">Reasoning</string>
+    <string name="will">Will</string>
+    <string name="instinct">Instinct</string>
+    <string name="vitality">Vitality</string>
+
+    <!--Basic attributes string array to be used in code,
+     created from above string resources-->
+    <string-array name="basic_attributes">
+        <item>@string/physique</item>
+        <item>@string/coordination</item>
+        <item>@string/reasoning</item>
+        <item>@string/will</item>
+        <item>@string/instinct</item>
+        <item>@string/vitality</item>
+    </string-array>
+
+    <!--Cross attribute string resources-->
+    <string name="might">Might</string>
+    <string name="matter">Matter</string>
+    <string name="toughness">Toughness</string>
+    <string name="charm">Charm</string>
+    <string name="reaction">Reaction</string>
+    <string name="perception">Perception</string>
+    <string name="rationality">Rationality</string>
+    <string name="dexterity">Dexterity</string>
+    <string name="ethereality">Ethereality</string>
+
+    <!--Cross attributes string array to be used in code,
+     created from above string resources-->
+    <string-array name="cross_attributes">
+        <item>@string/might</item>
+        <item>@string/matter</item>
+        <item>@string/toughness</item>
+        <item>@string/charm</item>
+        <item>@string/reaction</item>
+        <item>@string/perception</item>
+        <item>@string/rationality</item>
+        <item>@string/dexterity</item>
+        <item>@string/ethereality</item>
+    </string-array>
+
+    <!--Nexus attribute string resources-->
+    <string name="human">Human</string>
+    <string name="animal">Animal</string>
+    <string name="vegetal">Vegetal</string>
+    <string name="inorganic">Inorganic</string>
+    <string name="artificial">Artificial</string>
+    <string name="magic_nex">Magic</string> <!-- Because there is also a skill same name-->
+
+    <!--Nexus attributes string array to be used in code,
+     created from above string resources-->
+    <string-array name="nexus_attributes">
+        <item>@string/human</item>
+        <item>@string/animal</item>
+        <item>@string/vegetal</item>
+        <item>@string/inorganic</item>
+        <item>@string/artificial</item>
+        <item>@string/magic_nex</item>
+    </string-array>
+
+    <!--Skill attribute string resources-->
+    <string name="attack">Attack</string>
+    <string name="defense">Defense</string>
+    <string name="harvest">Harvest</string>
+    <string name="alchemy">Alchemy</string>
+    <string name="magic_s">Magic</string>
+    <string name="potion">Potion</string>
+    <string name="summoning">Summoning</string>
+    <string name="manufacturing">Manufacturing</string>
+    <string name="crafting">Crafting</string>
+    <string name="engineering">Engineering</string>
+    <string name="tailoring">Tailoring</string>
+    <string name="ranging">Ranging</string>
+    <string name="overall">Overall</string>
+
+    <!--Skill attributes string array to be used in code,
+     created from above string resources-->
+    <string-array name="skill_attributes">
+        <item>@string/attack</item>
+        <item>@string/defense</item>
+        <item>@string/harvest</item>
+        <item>@string/alchemy</item>
+        <item>@string/magic_s</item>
+        <item>@string/potion</item>
+        <item>@string/summoning</item>
+        <item>@string/manufacturing</item>
+        <item>@string/crafting</item>
+        <item>@string/engineering</item>
+        <item>@string/tailoring</item>
+        <item>@string/ranging</item>
+        <item>@string/overall</item>
+    </string-array>
+
+    <string name="food">Food</string>
+    <string name="material_points">Material Points</string>
+    <string name="ethereal_points">Ethereal Points</string>
+    <string name="action_points">Action Points</string>
+    <string name="pick_points">Pick Points</string>
+
+    <string-array name="additional_stats">
+        <item>@string/food</item>
+        <item>@string/material_points</item>
+        <item>@string/ethereal_points</item>
+    </string-array>
+
+
+</resources>
