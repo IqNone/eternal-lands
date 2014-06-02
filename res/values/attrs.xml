@@ -1,6 +1,10 @@
 <resources>
+
     <declare-styleable name="ELProgressBar">
         <attr name="showText" format="boolean" />
         <attr name="color" format="color"/>
+        <attr name="remaining" format="boolean"/>
+        <attr name="draw_experience" format="boolean"/>
     </declare-styleable>
+
 </resources>
