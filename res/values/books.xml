@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="books">
+        <item>Metallurgy</item>
+        <item>Metal Smelting</item>
+        <item>Metal Mining</item>
+        <item>Metal Molding</item>
+        <item>Gold Smelting</item>
+        <item>Iron Smelting</item>
+        <item>Silver Smelting</item>
+        <item>Steel Smelting</item>
+        <item>Titanium Smelting</item>
+        <item>Hydrogenium Smelting</item>
+        <item>Gold Mining</item>
+        <item>Iron Mining</item>
+        <item>Silver Mining</item>
+        <item>Titanium Mining</item>
+        <item>Steel Molding</item>
+        <item>Gold Molding</item>
+        <item>Iron Molding</item>
+        <item>Silver Molding</item>
+        <item>Titanium Molding</item>
+        <item>Weapon Construction</item>
+        <item>Sword Construction</item>
+        <item>Iron Sword</item>
+        <item>Iron Broad Sword</item>
+        <item>Steel Long Sword</item>
+        <item>Two Edged Steel Sword</item>
+        <item>Titanium Short</item>
+        <item>Titanium Long</item>
+        <item>Titanium Serpent</item>
+        <item>Armor Construction</item>
+        <item>Torso Armor</item>
+        <item>Feet Armor</item>
+        <item>Legs Armor</item>
+        <item>Head Armor</item>
+        <item>Leather Helmet</item>
+        <item>Iron Helmet</item>
+        <item>Iron Greaves</item>
+        <item>Iron Cuisses</item>
+        <item>Padded Leather Pants</item>
+        <item>Iron Chainmail Torso</item>
+        <item>Iron Plate Mail</item>
+        <item>Steel Chainmail Torso</item>
+        <item>Titanium Chainmail Torso</item>
+        <item>Torso Padded Leather</item>
+        <item>Shields Construction</item>
+        <item>Iron Shield</item>
+        <item>Steel Shield</item>
+        <item>Crystal Technology</item>
+        <item>Crystal Mining</item>
+        <item>Quartz Mining</item>
+        <item>Rose Quartz Mining</item>
+        <item>Blue Quartz Mining</item>
+        <item>Ruby Mining</item>
+        <item>Emerald Mining</item>
+        <item>Sapphire Mining</item>
+        <item>Diamond Mining</item>
+        <item>Crystal Processing</item>
+        <item>Diamond Processing</item>
+        <item>Sapphire Processing</item>
+        <item>Emerald Processing</item>
+        <item>Ruby Processing</item>
+        <item>Jewlery Technology</item>
+        <item>Crystal embedding</item>
+        <item>Generic Rings Building</item>
+        <item>Generic Medalions Building</item>
+        <item>Diamond embedding</item>
+        <item>Sapphire embedding</item>
+        <item>Emerald embedding</item>
+        <item>Ruby embedding</item>
+        <item>Silver Rings Building</item>
+        <item>Gold Rings Building</item>
+        <item>Silver Medallions Building</item>
+        <item>Gold Medallions Building</item>
+        <item>Sun Medallion Building</item>
+        <item>Unicorn Medallion Building</item>
+        <item>Moon Medallion Building</item>
+        <item>Stars Medallion Building</item>
+        <item>VOTD Ring Building</item>
+        <item>Naralik Ring Building</item>
+        <item>Disengagement Ring Building</item>
+        <item>Ring of Damage Building</item>
+        <item>Isla Prima Ring</item>
+        <item>WhiteStone Ring</item>
+        <item>Portland Ring</item>
+        <item>Desert Pines Ring</item>
+        <item>Biology</item>
+        <item>Biochemistry</item>
+        <item>Botanics</item>
+        <item>Anatomy</item>
+        <item>Advanced Alchemy</item>
+        <item>Advanced Potions</item>
+        <item>Life Essence</item>
+        <item>Death Essence</item>
+        <item>Health Essence</item>
+        <item>Magic Essence</item>
+        <item>Potion of Body Restoration</item>
+        <item>Potion of Wildness</item>
+        <item>Potion of Vitality</item>
+        <item>Potion of Coordination</item>
+        <item>Potion of Will</item>
+        <item>Potion of Physique</item>
+        <item>Potion of Feasting</item>
+        <item>Potion of Manufacturing</item>
+        <item>Potion of Summoning</item>
+        <item>Advanced Summoning</item>
+        <item>Snakes Summoning</item>
+        <item>Wolf Summoning</item>
+        <item>Boar Summoning</item>
+        <item>Skeleton Summoning</item>
+        <item>Gargoyles Summoning</item>
+        <item>Puma Summoning</item>
+        <item>Bear Summoning</item>
+        <item>Combat Tactics</item>
+        <item>Goblin Fighting</item>
+        <item>Skeleton Fighting</item>
+        <item>Gargoyle Fighting</item>
+        <item>Puma Fighting</item>
+        <item>Orc Fighting</item>
+        <item>Bear Fighting</item>
+        <item>Troll Fighting</item>
+        <item>Cyclops Fighting</item>
+        <item>Dwarf Fighting</item>
+        <item>Elf Fighting</item>
+        <item>Human Fighting</item>
+        <item>Axe Construction</item>
+        <item>Iron Axe</item>
+        <item>Steel Axe</item>
+        <item>Titanium Axe</item>
+        <item>Fluffy Summoning</item>
+        <item>Chimeran Mountain Wolf Summoning</item>
+        <item>Potion of Crafting</item>
+        <item>Magic Potion</item>
+        <item>Anitora Ring</item>
+        <item>Idaloran Ring</item>
+        <item>Bethel Ring</item>
+        <item>Sedicolis Ring</item>
+        <item>Palon Vertas Ring</item>
+        <item>Kusamura Ring</item>
+        <item>Egratia Ring</item>
+        <item>Iscarlith Ring</item>
+        <item>Irinveron Ring</item>
+        <item>Hulda Ring</item>
+        <item>Trassian Ring</item>
+        <item>Isle of the Forgotten Ring</item>
+        <item>Imbroglio Islands Ring</item>
+        <item>Hurquin Ring</item>
+        <item>Glacmor Ring</item>
+        <item>Emerald Valley Ring</item>
+        <item>Special Sword Manufacturing</item>
+        <item>Fire Sword Manufacturing</item>
+        <item>Ice Sword Manufacturing</item>
+        <item>Magic Sword Manufacturing</item>
+        <item>Thermal Sword Manufacturing</item>
+        <item>Iron Sword of Fire</item>
+        <item>Iron Broad Sword of Fire</item>
+        <item>Iron Broad Sword of Ice</item>
+        <item>Steel Long Sword of Fire</item>
+        <item>Steel Long Sword of Ice</item>
+        <item>Steel Long Sword of Magic</item>
+        <item>Steel Two Edged Sword of Fire</item>
+        <item>Steel Two Edged Sword of Ice</item>
+        <item>Steel Two Edged Sword of Magic</item>
+        <item>Steel Two Edged Sword of Thermal</item>
+        <item>Titanium/Steel Short Sword of Fire</item>
+        <item>Titanium/Steel Short Sword of Ice</item>
+        <item>Titanium/Steel Short Sword of Magic</item>
+        <item>Titanium/Steel Short Sword of Thermal</item>
+        <item>Titanium/Steel Long Sword of Fire</item>
+        <item>Titanium/Steel Long Sword of Ice</item>
+        <item>Titanium/Steel Long Sword of Magic</item>
+        <item>Titanium/Steel Long Sword of Thermal</item>
+        <item>Serpent Sword of Fire</item>
+        <item>Serpent Sword of Ice</item>
+        <item>Serpent Sword of Magic</item>
+        <item>Serpent Sword of Thermal</item>
+        <item>Female Goblin Summoning</item>
+        <item>Armed Male Goblin Summoning</item>
+        <item>Armed Skeleton</item>
+        <item>Female Orc Summoning</item>
+        <item>Male Orc Summoning</item>
+        <item>Armed Female Orc Summoning</item>
+        <item>Armed Male Orc Summoning</item>
+        <item>Cyclop Summoning</item>
+        <item>Polar Bear Summoning</item>
+        <item>Hydrogenium Mining</item>
+        <item>Hydrogenium Molding</item>
+        <item>Wolframite Smelting</item>
+        <item>Wolframite Mining</item>
+        <item>Wolfram Molding</item>
+        <item>Steel Greaves</item>
+        <item>Steel Cuisses</item>
+        <item>Titanium Shield</item>
+        <item>Steel Helmet</item>
+        <item>Titanium Helmet</item>
+        <item>Titanium Greaves</item>
+        <item>Titanium Cuisses</item>
+        <item>Steel Plate Mail</item>
+        <item>Titanium Plate Mail</item>
+        <item>Emerald Claymore</item>
+        <item>Cutlass</item>
+        <item>Sunbreaker</item>
+        <item>Orc Slayer</item>
+        <item>Eagle Wing</item>
+        <item>Rapier</item>
+        <item>Jagged Saber</item>
+        <item>Poison Antidote</item>
+        <item>Potion of True Sight</item>
+        <item>Potion of Invisibility</item>
+        <item>Potion of Accuracy</item>
+        <item>Potion of Evasion</item>
+        <item>Arctic Chimean Summoning</item>
+        <item>Yeti Summoning</item>
+        <item>Giant Summoning</item>
+        <item>Crown of Life</item>
+        <item>Crown of Mana</item>
+        <item>Ring of Mana Destruction</item>
+        <item>Ring of Massive Mana Destruction</item>
+        <item>Gypsum Harvesting</item>
+        <item>Gypsum Molding</item>
+        <item>Sslessar Summoning Stone</item>
+        <item>Bear Summoning Stone</item>
+        <item>Tiger Summoning Stone</item>
+        <item>Yeti Summoning Stone</item>
+        <item>Giant Spider Summoning Stone</item>
+        <item>Arctic Chim Summoning Stone</item>
+        <item>Phantom Warrior Summoning Stone</item>
+        <item>Fluffy Summoning Stone</item>
+        <item>Armed Orc Summoning Stone</item>
+        <item>Giant Summoning Stone</item>
+        <item>Potion of Alchemy</item>
+        <item>Potion of Potion</item>
+        <item>Copper Mining</item>
+        <item>Tin Mining</item>
+        <item>Copper Smelting</item>
+        <item>Tin Smelting</item>
+        <item>Copper Molding</item>
+        <item>Tin Molding</item>
+        <item>Bronze Plate Mail</item>
+        <item>Bronze Cuisses</item>
+        <item>Bronze Greaves</item>
+        <item>Bronze Helm</item>
+        <item>Bronze Shield</item>
+        <item>Seridium Mining</item>
+        <item>Seridium Molding</item>
+        <item>Seridium Smelting</item>
+        <item>Seridium Medallions Building</item>
+        <item>Heaven Spawner Medallion Building</item>
+        <item>Harvester Medallion Building</item>
+        <item>Cinnabar Mining</item>
+        <item>Mercury Extraction</item>
+        <item>Vial Mold</item>
+        <item>Alembic Building</item>
+        <item>Medallion of Life Building</item>
+        <item>Bronze Sword Building</item>
+        <item>Red Dragon Torso Armor Building</item>
+        <item>Red Dragon Greaves Armor Building</item>
+        <item>Red Dragon Cuisses Armor Building</item>
+        <item>Red Dragon Helm Armor Building</item>
+        <item>Spear Building</item>
+        <item>Halberd Building</item>
+        <item>Dragon Blade Building</item>
+        <item>Golden Star Mace Building</item>
+        <item>Frying Pan Building</item>
+        <item>Night Visor Building</item>
+        <item>Caltrops Building</item>
+        <item>Blackpowder Building</item>
+        <item>Camouflage Cape Building</item>
+        <item>Rope Building</item>
+        <item>Snare Building</item>
+        <item>Nails Building</item>
+        <item>Poisoned Caltrop Building</item>
+        <item>Small Landmine Building</item>
+        <item>Saltpetre Manufacturing</item>
+        <item>Saving Stone</item>
+        <item>Hawk Summoning</item>
+        <item>Falcon Summoning</item>
+        <item>Potion of Engineering</item>
+        <item>Barricade Building</item>
+        <item>Ogres Fighting</item>
+        <item>Phantom Warriors Fighting</item>
+        <item>Fluffy Fighting</item>
+        <item>Yeti Fighting</item>
+        <item>Giants Fighting</item>
+        <item>Red Dragons Fighting</item>
+        <item>Black Dragons Fighting</item>
+        <item>Red Dragon Summoning</item>
+        <item>Astrology Stones</item>
+        <item>A/D Indicator Building</item>
+        <item>Criticals Indicator Building</item>
+        <item>Accuracy/Magic Indicator Building</item>
+        <item>Harvest/Degrade Indicator Building</item>
+        <item>Make Rare/Fail Indicator Building</item>
+        <item>Lightmeter</item>
+        <item>Fabric weaving</item>
+        <item>Red Dye</item>
+        <item>Orange Dye</item>
+        <item>Yellow Dye</item>
+        <item>Green Dye</item>
+        <item>Blue Dye</item>
+        <item>Purple Dye</item>
+        <item>Black Dye</item>
+        <item>Fabric Dyeing</item>
+        <item>Tunic Making</item>
+        <item>Tunic/Shirt Combo Making</item>
+        <item>Robe Making</item>
+        <item>Robe Skirts Making</item>
+        <item>Baggy Pants Making</item>
+        <item>Scarves Making</item>
+        <item>Tricorn Hat Making</item>
+        <item>Buccaneer Hat Making</item>
+        <item>Santa Hat Making</item>
+        <item>Hood Making</item>
+        <item>Black Dragon Helm</item>
+        <item>Black Dragon Mail</item>
+        <item>Black Dragon Cuisses</item>
+        <item>Black Dragon Greaves</item>
+        <item>No More Warlock</item>
+        <item>Medium Landmine</item>
+        <item>High Explosive Mine</item>
+        <item>Invasionmeter</item>
+        <item>Bows and Crossbows</item>
+        <item>Arrows and bolts technology</item>
+        <item>PK arrows</item>
+        <item>Ice arrows</item>
+        <item>Fire arrows</item>
+        <item>Magic arrows</item>
+        <item>PK bolts</item>
+        <item>Ice bolts</item>
+        <item>Fire bolts</item>
+        <item>Magic bolts</item>
+        <item>Arrows/bolt head mold</item>
+        <item>Arrow/bolt head</item>
+        <item>RC Landmine Building</item>
+        <item>RC Detonator</item>
+        <item>Mana Drain Ward</item>
+        <item>Mana Burn Ward</item>
+        <item>Invisibility Removal Ward</item>
+        <item>Magic Immunity Removal Ward</item>
+        <item>Ice Dragon Torso Armor Building</item>
+        <item>Ice Dragon Greaves Armor Building</item>
+        <item>Ice Dragon Cuisses Armor Building</item>
+        <item>Ice Dragon Helm Armor Building</item>
+        <item>Scythe Building</item>
+        <item>Potion of Cold Protection</item>
+        <item>Potion of Heat Protection</item>
+        <item>Potion of Radiation Protection</item>
+        <item>Creature food</item>
+        <item>Mule Glyph</item>
+        <item>Enhanced items</item>
+        <item>Enhanced armor</item>
+        <item>Enhanced weapons</item>
+        <item>Potion of Speed Hax</item>
+        <item>Potion of Attack Reduction</item>
+        <item>Potion of Defense Reduction</item>
+        <item>Dvarium Smelting</item>
+        <item>Dvarium Mining</item>
+        <item>Dvarium Molding</item>
+        <item>Gatherer Medallion Building</item>
+        <item>Radioactive Rapier</item>
+        <item>Medallion of Mana Building</item>
+        <item>Mage Robes Making</item>
+        <item>Tunic of the Ninja Making</item>
+        <item>Generic Manufacturing Experience</item>
+        <item>Generic Tailoring Experience</item>
+        <item>Generic Crafting Experience</item>
+        <item>Generic Potioning Experience</item>
+        <item>Generic Engineering Experience</item>
+        <item>Cockatrice Fighting</item>
+        <item>Arctic Chimeran Fighting</item>
+        <item>Book writting</item>
+        <item>Book of skirts</item>
+        <item>Book of dresses</item>
+        <item>Book of vests</item>
+        <item>Book ok Enhanced Unicorn Medallion</item>
+        <item>Book ok Enhanced Sun Medallion</item>
+        <item>Blue Dragon Torso Armor Building</item>
+        <item>Blue Dragon Greaves Armor Building</item>
+        <item>Blue Dragon Cuisses Armor Building</item>
+        <item>Blue Dragon Helm Armor Building</item>
+        <item>Blue Dragon Shield</item>
+        <item>Blue dragon sword</item>
+        <item>Boots Making</item>
+        <item>Wizard Making</item>
+        <item>Wedding Dress Making</item>
+        <item>Peasant Dress Making</item>
+        <item>Doublets Making</item>
+        <item>Jackets Making</item>
+        <item>Wedding Skirts Making</item>
+        <item>Peasant Skirts Making</item>
+    </string-array>
+</resources>

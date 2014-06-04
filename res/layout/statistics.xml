@@ -1,0 +1,837 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:measureWithLargestChild="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="left"
+        android:padding="5dp"
+        android:id="@+id/BaseAttNameCol">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/basic_attributes_title"
+            android:textColor="#ffffff"
+            android:textSize="8dp"
+            android:id="@+id/basic_att_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/physique"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/phy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coordination"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/coord" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reasoning"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/rea" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/will"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/wil" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instinct"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/ins" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vitality"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/vit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cross_attributes_title"
+            android:textColor="#ffff00"
+            android:textSize="8sp"
+            android:id="@+id/cross_att_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/might"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/might" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/matter"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/matter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toughness"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/toughness" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/charm"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/charm" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reaction"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/reaction" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perception"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/perception" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rationality"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/rationality" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dexterity"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/dexterity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ethereality"
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/ethereality" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food"
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/food" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/material_points"
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/material_points" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ethereal_points"
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/ethereal_points" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_points"
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/action_points" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:measureWithLargestChild="true"
+        android:layout_toRightOf="@id/BaseAttNameCol"
+        android:padding="5sp"
+        android:id="@+id/BaseAttValueCol">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="8sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/phy_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/coord_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/rea_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/wil_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/ins_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/vit_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="8sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/might_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/matter_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/toughness_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/charm_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/reaction_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/perception_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/rationality_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/dexterity_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/ethereality_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/food_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/material_points_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/ethereal_points_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/action_points_value" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:measureWithLargestChild="true"
+        android:layout_toRightOf="@id/BaseAttValueCol"
+        android:gravity="left"
+        android:padding="5sp"
+        android:id="@+id/Nexus_SkillNameCol">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nexus_attributes_title"
+            android:textColor="#ffffff"
+            android:textSize="8sp"
+            android:id="@+id/nexus_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/human"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/human" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/animal"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/animal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vegetal"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/vegetal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inorganic"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/inorganic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/artificial"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/artificial" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/magic_nex"
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/magic_nex" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skill_attributes_title"
+            android:textColor="#ffa500"
+            android:textSize="8sp"
+            android:id="@+id/skills_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attack"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/attack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/defense"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/defense" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/harvest"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/harvest" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alchemy"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/alchemy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/magic_s"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/magic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/potion"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/potion" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/summoning"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/summoning" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manufacturing"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/manufacturing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crafting"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/crafting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/engineering"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/engineering" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tailoring"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/tailoring" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ranging"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/ranging" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/overall"
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/overall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_points"
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/pickpoints" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:measureWithLargestChild="true"
+        android:layout_toRightOf="@id/Nexus_SkillNameCol"
+        android:padding="5sp"
+        android:id="@+id/Nexus_SkillValCol">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="8sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/human_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/animal_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/vegetal_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/inorganic_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/artificial_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="7sp"
+            android:id="@+id/magic_nex_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="8sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffff00"
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/attack_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/defense_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/harvest_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/alchemy_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/magic_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/potion_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/summoning_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/manufacturing_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/crafting_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/engineering_value" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/tailoring_value" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/ranging_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffa500"
+            android:textSize="7sp"
+            android:id="@+id/overall_value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp"
+            android:id="@+id/place_holder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#0000ff"
+            android:textSize="7sp"
+            android:id="@+id/pickpoints_value" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:background="@drawable/el_widget_skin"
+        android:padding="2sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_below="@id/BaseAttNameCol">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Research"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:id="@+id/researching" />
+
+        <el.android.widgets.ELProgressBar
+            android:id="@+id/researchbar"
+            android:layout_marginLeft="0sp"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            color="#FF0000" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
