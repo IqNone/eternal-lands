@@ -132,17 +132,17 @@ public class Manufacture extends View {
     public void check_recipe(){
         // Implementing this whole thing might be easier with arraylist of items?
         int itemPos;
-        int empty_recipe = 0;
+        int num_items = 0;
         setRecipe_ok(true);
 
         // If there is no item in recipe, don't bother checking items
         for(int i = 0; i < manufacture_items.length; i++) {
-            if (manufacture_items[i] == null) {
-                empty_recipe++;
+            if (manufacture_items[i] != null) {
+                num_items++;
             }
         }
 
-        if(empty_recipe == manufacture_items.length) {
+        if(num_items == 0) {
             setRecipe_ok(false);
             return;
         }
@@ -150,12 +150,16 @@ public class Manufacture extends View {
         boolean possible = true;
 
         // Desktop client code adapted. (Should be easier)
-        for(int i = 0; possible && i< manufacture_items.length; i++) {
+        for(int i = 0; possible && i< num_items; i++) {
             if(manufacture_items[i] != null && manufacture_items[i].quantity > 0) {
                 boolean not_found = true;
                 for(int j = 0; possible && j < items.length; j++) {
                     if(  (items[j] != null && items[j].quantity > 0) &&
                             (manufacture_items[i].imageId == items[j].imageId) ){
+                        // We need to set position of item in the inventory position in case
+                        // item is moved in inventory.
+                        manufacture_items[i].pos = j;
+
                         // Original code also checks for item id's. They are not currently use in Android.
                         if( manufacture_items[i].quantity > items[j].quantity) {
                             possible = false;
