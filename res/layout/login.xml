@@ -4,7 +4,7 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:padding="20dp">
+              android:padding="20dp" android:baselineAligned="false">
 
     <TextView android:text="@string/username"
               android:layout_width="fill_parent"
@@ -52,4 +52,39 @@
               android:layout_height="wrap_content"
               android:layout_width="wrap_content"
               android:textColor="#ff0000"/>
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="left">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/releaseName"
+                android:textColor="#0cff8b"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/releaseNumber"
+                android:textColor="#7ba5ff"
+                android:textStyle="italic"/>
+    </LinearLayout>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/releaseDate"
+            android:layout_gravity="left|center_vertical"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/see_release_notes"
+            android:id="@+id/releaseContentLink"
+            android:textColor="#d8bbff" android:layout_margin="5dp"/>
+
 </LinearLayout>

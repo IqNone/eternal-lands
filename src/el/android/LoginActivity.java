@@ -9,9 +9,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import el.android.release.ReleaseNotesService;
 import el.logging.LoggerFactory;
 import org.acra.ACRA;
 import org.acra.sender.EmailIntentSender;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static android.view.View.OnClickListener;
 import static el.android.GameMetadata.authenticateClient;
@@ -20,22 +25,41 @@ import static el.android.SharedSettings.PREDEFINED_PASSWORD;
 import static el.android.SharedSettings.PREDEFINED_USERNAME;
 
 public class LoginActivity extends Activity {
+    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("d LLLL yyyy");
+
     private EditText usernameText;
     private EditText passwordText;
 
     private ImageView loginButton;
+    private ReleaseNotesService releaseNotesService;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        usernameText = (EditText) findViewById(R.id.username);
-        passwordText = (EditText) findViewById(R.id.password);
+        usernameText = getEditText(R.id.username);
+        passwordText = getEditText(R.id.password);
 
         loginButton = (ImageView) findViewById(R.id.login);
         loginButton.setOnClickListener(ON_LOG_IN_CLICK);
 
         findViewById(R.id.settings).setOnClickListener(ON_SETTINGS_CLICK);
+
+        releaseNotesService = new ReleaseNotesService(this);
+
+        getTextView(R.id.releaseName).setText(releaseNotesService.getReleaseName());
+        getTextView(R.id.releaseNumber).setText(releaseNotesService.getReleaseNumber());
+        getTextView(R.id.releaseDate).setText(DATE_FORMAT.format(releaseNotesService.getReleaseDate()));
+
+        getTextView(R.id.releaseContentLink).setOnClickListener(ON_READ_NOTES_CLICK);
+    }
+
+    private EditText getEditText(int resource) {
+        return (EditText)findViewById(resource);
+    }
+
+    private TextView getTextView(int resource) {
+        return (TextView)findViewById(resource);
     }
 
     @Override
@@ -112,6 +136,13 @@ public class LoginActivity extends Activity {
         @Override
         public void onClick(View v) {
             startActivity(new Intent(LoginActivity.this, SettingsActivity.class));
+        }
+    };
+
+    private OnClickListener ON_READ_NOTES_CLICK = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(LoginActivity.this, ReleaseNotesActivity.class));
         }
     };
 }

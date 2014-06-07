@@ -14,7 +14,7 @@ public class TouchListener{
     private static final int NPC_COLOR = 2;
     private static final int CREATURE_COLOR = 6;
     private static final int LONG_PRESS_MILLIS = 350;
-    private static final int IGNORE_MOVE = 10;
+    private static final int IGNORE_MOVE = 30;
 
     private Actor actor;
     private Commander.CommandListener commandListener;

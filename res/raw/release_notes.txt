@@ -1,0 +1,7 @@
+v0.9.0 : Helebek
+07 June 2014
+
+    1. Add manufacture window
+    2. Add stats window
+    3. Add sit down button
+    4. Add release version

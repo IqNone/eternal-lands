@@ -7,6 +7,7 @@
     <string name="password_empty_error">Password cannot be empty</string>
     <string name="connect_to_server_error">Could not connect to server</string>
     <string name="authenticate_error">Bad username/password</string>
+    <string name="version">Version</string>
     <string name="open_chat">open chat</string>
     <string name="send_text">Send text</string>
     <string name="confirm_logout">Are you sure you want to logout?</string>
@@ -29,5 +30,5 @@
     <string name="move_on_long_press">Move on long press</string>
 
     <string name="manufacture">Manufacture</string>
-
+    <string name="see_release_notes">see release notes</string>
 </resources>
