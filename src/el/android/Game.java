@@ -11,15 +11,14 @@ import android.text.InputFilter;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
-import android.util.Log;
-import android.view.*;
+import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-import android.util.TypedValue;
-
 import el.actor.Actor;
 import el.actor.Item;
 import el.actor.Span;
@@ -100,7 +99,7 @@ public class Game extends GameRunner {
 
         // Get the amount of food from settings
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(Game.this);
-        max_food = Integer.parseInt(settings.getString(SharedSettings.MAX_FOOD_AMOUNT, ""));
+        max_food = Integer.parseInt(settings.getString(SharedSettings.MAX_FOOD_AMOUNT, "45"));
 
         if (max_food > 100 || max_food < 0) {
             max_food = 100;
@@ -111,16 +110,6 @@ public class Game extends GameRunner {
         storageDialog = new StorageDialog(this);
         tradeDialog = new TradeDialog(this);
         confirmLogoutDialog = createConfirmLogoutDialog();
-
-//        i'm not doing it right, screw this
-//        CLIENT.sendOpeningScreen();
-
-//        findViewById(R.id.stats).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                LoggerFactory.logger(this.getClass()).error(new RuntimeException("Test email exception. You get it when you press the 'stats' button"));
-//            }
-//        });
     }
 
     private Dialog createConfirmLogoutDialog() {
