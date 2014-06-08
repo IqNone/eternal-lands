@@ -16,7 +16,6 @@ import org.acra.sender.EmailIntentSender;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import static android.view.View.OnClickListener;
 import static el.android.GameMetadata.authenticateClient;
@@ -31,7 +30,6 @@ public class LoginActivity extends Activity {
     private EditText passwordText;
 
     private ImageView loginButton;
-    private ReleaseNotesService releaseNotesService;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +43,7 @@ public class LoginActivity extends Activity {
 
         findViewById(R.id.settings).setOnClickListener(ON_SETTINGS_CLICK);
 
-        releaseNotesService = new ReleaseNotesService(this);
+        ReleaseNotesService releaseNotesService = new ReleaseNotesService(this);
 
         getTextView(R.id.releaseName).setText(releaseNotesService.getReleaseName());
         getTextView(R.id.releaseNumber).setText(releaseNotesService.getReleaseNumber());
