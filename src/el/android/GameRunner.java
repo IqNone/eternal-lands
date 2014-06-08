@@ -59,6 +59,9 @@ public abstract class GameRunner extends Activity {
         if(CLIENT != null) {
             CLIENT.stop();
         }
+
+        CONNECTION = null;
+        CLIENT = null;
     }
 
     private Runnable uiMainLoop = new Runnable() {
