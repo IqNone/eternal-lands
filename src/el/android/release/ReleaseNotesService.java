@@ -9,9 +9,10 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class ReleaseNotesService {
-    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("d LLLL yyyy");
+    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("d LLLL yyyy", Locale.ENGLISH);
 
     private Context context;
 
