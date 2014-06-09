@@ -1,4 +1,4 @@
 local.properties
 build.xml
-gen
+gen/
 project.properties
