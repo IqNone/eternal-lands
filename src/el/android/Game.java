@@ -346,152 +346,17 @@ public class Game extends GameRunner {
         }
     }
 
-    // TODO: Convert this dialog to a custom dialog implementation with functions that will set the text because this is ugly
     private class OnStatisticsButtonClickListener implements View.OnClickListener {
-        private TextView temp_TextView;
-        private ELProgressBar researchBar;
-        String[] book_list;
-        View stats_layout;
+
+        private PlayerStatsDialog dialog = new PlayerStatsDialog(Game.this);
 
         @Override
         public void onClick(View v) {
-            final Dialog statistics_dialog = new Dialog(Game.this);
-            LayoutInflater inflater = Game.this.getLayoutInflater();
-
-            stats_layout = inflater.inflate(R.layout.statistics, null);
-
-            statistics_dialog.setTitle("Player Statistics");
-// Base attribute information
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.phy_value);
-            temp_TextView.setText(String.valueOf(actor.phy.current) + "/" + String.valueOf(actor.phy.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.coord_value);
-            temp_TextView.setText(String.valueOf(actor.coo.current) + "/" + String.valueOf(actor.coo.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.rea_value);
-            temp_TextView.setText(String.valueOf(actor.rea.current) + "/" + String.valueOf(actor.rea.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.wil_value);
-            temp_TextView.setText(String.valueOf(actor.wil.current) + "/" + String.valueOf(actor.wil.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.ins_value);
-            temp_TextView.setText(String.valueOf(actor.ins.current) + "/" + String.valueOf(actor.ins.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.vit_value);
-            temp_TextView.setText(String.valueOf(actor.vit.current) + "/" + String.valueOf(actor.vit.base));
-
-            // Cross attributes
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.might_value);
-            temp_TextView.setText(String.valueOf(actor.might.current) + "/" + String.valueOf(actor.might.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.matter_value);
-            temp_TextView.setText(String.valueOf(actor.matter.current) + "/" + String.valueOf(actor.matter.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.toughness_value);
-            temp_TextView.setText(String.valueOf(actor.toughness.current) + "/" + String.valueOf(actor.toughness.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.charm_value);
-            temp_TextView.setText(String.valueOf(actor.charm.current) + "/" + String.valueOf(actor.charm.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.reaction_value);
-            temp_TextView.setText(String.valueOf(actor.reaction.current) + "/" + String.valueOf(actor.reaction.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.perception_value);
-            temp_TextView.setText(String.valueOf(actor.perception.current) + "/" + String.valueOf(actor.perception.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.rationality_value);
-            temp_TextView.setText(String.valueOf(actor.rationality.current) + "/" + String.valueOf(actor.rationality.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.dexterity_value);
-            temp_TextView.setText(String.valueOf(actor.dexterity.current) + "/" + String.valueOf(actor.dexterity.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.ethereality_value);
-            temp_TextView.setText(String.valueOf(actor.ethereality.current) + "/" + String.valueOf(actor.ethereality.base));
-
-
-            // Nexus information
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.human_value);
-            temp_TextView.setText(String.valueOf(actor.human_nex.current) + "/" + String.valueOf(actor.human_nex.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.animal_value);
-            temp_TextView.setText(String.valueOf(actor.animal_nex.current) + "/" + String.valueOf(actor.animal_nex.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.vegetal_value);
-            temp_TextView.setText(String.valueOf(actor.vegetal_nex.current) + "/" + String.valueOf(actor.vegetal_nex.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.inorganic_value);
-            temp_TextView.setText(String.valueOf(actor.inorganic_nex.current) + "/" + String.valueOf(actor.inorganic_nex.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.artificial_value);
-            temp_TextView.setText(String.valueOf(actor.artificial_nex.current) + "/" + String.valueOf(actor.artificial_nex.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.magic_nex_value);
-            temp_TextView.setText(String.valueOf(actor.magic_nex.current) + "/" + String.valueOf(actor.magic_nex.base));
-            // Skill information
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.attack_value);
-            temp_TextView.setText(String.valueOf(actor.attack_skill.current) + "/" + String.valueOf(actor.attack_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.attack_exp.current) +  "/" + String.valueOf(actor.statistics.attack_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.defense_value);
-            temp_TextView.setText(String.valueOf(actor.defense_skill.current) + "/" + String.valueOf(actor.defense_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.defense_exp.current) +  "/" + String.valueOf(actor.statistics.defense_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.harvest_value);
-            temp_TextView.setText(String.valueOf(actor.harvesting_skill.current) + "/" + String.valueOf(actor.harvesting_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.harvesting_exp.current) +  "/" + String.valueOf(actor.statistics.harvesting_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.alchemy_value);
-            temp_TextView.setText(String.valueOf(actor.alchemy_skill.current) + "/" + String.valueOf(actor.alchemy_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.alchemy_exp.current) +  "/" + String.valueOf(actor.statistics.alchemy_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.magic_value);
-            temp_TextView.setText(String.valueOf(actor.magic_skill.current) + "/" + String.valueOf(actor.magic_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.magic_exp.current) +  "/" + String.valueOf(actor.statistics.magic_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.potion_value);
-            temp_TextView.setText(String.valueOf(actor.potion_skill.current) + "/" + String.valueOf(actor.potion_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.potion_exp.current) +  "/" + String.valueOf(actor.statistics.potion_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.summoning_value);
-            temp_TextView.setText(String.valueOf(actor.summoning_skill.current) + "/" + String.valueOf(actor.summoning_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.summoning_exp.current) +  "/" + String.valueOf(actor.statistics.summoning_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.manufacturing_value);
-            temp_TextView.setText(String.valueOf(actor.manufacturing_skill.current) + "/" + String.valueOf(actor.manufacturing_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.manufacturing_exp.current) +  "/" + String.valueOf(actor.statistics.manufacturing_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.crafting_value);
-            temp_TextView.setText(String.valueOf(actor.crafting_skill.current) + "/" + String.valueOf(actor.crafting_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.crafting_exp.current) +  "/" + String.valueOf(actor.statistics.crafting_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.engineering_value);
-            temp_TextView.setText(String.valueOf(actor.engineering_skill.current) + "/" + String.valueOf(actor.engineering_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.engineering_exp.current) +  "/" + String.valueOf(actor.statistics.engineering_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.tailoring_value);
-            temp_TextView.setText(String.valueOf(actor.tailoring_skill.current) + "/" + String.valueOf(actor.tailoring_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.tailoring_exp.current) +  "/" + String.valueOf(actor.statistics.tailoring_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.ranging_value);
-            temp_TextView.setText(String.valueOf(actor.ranging_skill.current) + "/" + String.valueOf(actor.ranging_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.ranging_exp.current) +  "/" + String.valueOf(actor.statistics.ranging_exp.base) + "]");
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.overall_value);
-            temp_TextView.setText(String.valueOf(actor.overall_skill.current) + "/" + String.valueOf(actor.overall_skill.base) +
-                    "  ["  + String.valueOf(actor.statistics.overall_exp.current) +  "/" + String.valueOf(actor.statistics.overall_exp.base) + "]");
-
-
-            // Additional information
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.food_value);
-            temp_TextView.setText(String.valueOf(actor.food.current));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.material_points_value);
-            temp_TextView.setText(String.valueOf(actor.materialPoints.current) + "/" + String.valueOf(actor.materialPoints.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.ethereal_points_value);
-            temp_TextView.setText(String.valueOf(actor.etherealPoints.current) + "/" + String.valueOf(actor.etherealPoints.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.action_points_value);
-            temp_TextView.setText(String.valueOf(actor.action_points.current) + "/" + String.valueOf(actor.action_points.base));
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.pickpoints_value);
-            temp_TextView.setText(String.valueOf(actor.overall_skill.base - actor.overall_skill.current));
-
-
-            researchBar = (ELProgressBar) stats_layout.findViewById(R.id.researchbar);
-            researchBar.setColor(0xFF0000FF); researchBar.setShowText(true);
-
-
-            book_list = getResources().getStringArray(R.array.books);
-
-            if(actor.researching > book_list.length) {
-                actor.is_researching = 0;
-            }
-            else {
-                actor.is_researching = 1;
-            }
-
-            temp_TextView = (TextView) stats_layout.findViewById(R.id.researching);
-
-            if ( actor.is_researching != 0) {
-                temp_TextView.setText("Currently researching " + book_list[actor.researching]);
-                researchBar.setTotal(actor.research_total);
-                researchBar.setCurrent(actor.research_completed);
-            } else {
-                temp_TextView.setText("Researching nothing");
-                researchBar.setShowText(false);
-                researchBar.setTotal(1);
-                researchBar.setCurrent(0);
-            }
-
-            statistics_dialog.setContentView(stats_layout);
-            statistics_dialog.show();
+            invalidateableDialog = dialog;
+            lastOpenedDialog = dialog;
+            dialog.setActor(actor);
+            dialog.setContent();
+            dialog.show();
         }
 
     }
