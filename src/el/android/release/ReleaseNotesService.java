@@ -4,21 +4,17 @@ import android.content.Context;
 import el.android.R;
 import el.utils.IOUtils;
 
-import java.io.*;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class ReleaseNotesService {
-    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("d LLLL yyyy", Locale.ENGLISH);
-
     private Context context;
 
     private String number;
     private String name;
-    private Date date;
+    private String date;
 
     public ReleaseNotesService(Context context) {
         this.context = context;
@@ -29,12 +25,10 @@ public class ReleaseNotesService {
             String numberAndName[] = reader.readLine().split(":");
             number = numberAndName[0];
             name = numberAndName[1];
-            date = DATE_FORMAT.parse(reader.readLine());
+            date = reader.readLine();
         } catch (IOException e) {
             number = null;
             name = null;
-            date = null;
-        } catch (ParseException e) {
             date = null;
         } finally {
             IOUtils.closeQuite(reader);
@@ -49,7 +43,7 @@ public class ReleaseNotesService {
         return name;
     }
 
-    public Date getReleaseDate () {
+    public String getReleaseDate () {
         return date;
     }
 

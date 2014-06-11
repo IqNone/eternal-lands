@@ -14,9 +14,6 @@ import el.logging.LoggerFactory;
 import org.acra.ACRA;
 import org.acra.sender.EmailIntentSender;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
 import static android.view.View.OnClickListener;
 import static el.android.GameMetadata.authenticateClient;
 import static el.android.GameMetadata.startUpServerConnection;
@@ -24,8 +21,6 @@ import static el.android.SharedSettings.PREDEFINED_PASSWORD;
 import static el.android.SharedSettings.PREDEFINED_USERNAME;
 
 public class LoginActivity extends Activity {
-    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("d LLLL yyyy");
-
     private EditText usernameText;
     private EditText passwordText;
 
@@ -47,7 +42,7 @@ public class LoginActivity extends Activity {
 
         getTextView(R.id.releaseName).setText(releaseNotesService.getReleaseName());
         getTextView(R.id.releaseNumber).setText(releaseNotesService.getReleaseNumber());
-        getTextView(R.id.releaseDate).setText(DATE_FORMAT.format(releaseNotesService.getReleaseDate()));
+        getTextView(R.id.releaseDate).setText(releaseNotesService.getReleaseDate());
 
         getTextView(R.id.releaseContentLink).setOnClickListener(ON_READ_NOTES_CLICK);
     }
