@@ -13,7 +13,6 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -355,7 +354,6 @@ public class Game extends GameRunner {
             invalidateableDialog = dialog;
             lastOpenedDialog = dialog;
             dialog.setActor(actor);
-            dialog.setContent();
             dialog.show();
         }
 

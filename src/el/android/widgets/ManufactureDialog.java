@@ -2,20 +2,18 @@ package el.android.widgets;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import el.actor.Attribute;
+import el.actor.Attributes;
 import el.actor.Item;
 import el.actor.Span;
 import el.android.R;
 import el.client.Colors;
 
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.LayoutParams;
@@ -128,7 +126,7 @@ public class ManufactureDialog extends Dialog implements Invalidateable{
         manufacture.setItems(items);
     }
 
-    public void setCapacity(Attribute capacity) {
+    public void setCapacity(Attributes.Attribute capacity) {
         capacityInfo.setCapacity(capacity);
     }
 
@@ -162,13 +160,13 @@ public class ManufactureDialog extends Dialog implements Invalidateable{
     }
 
     private static class LoadInfo extends TextView {
-        private Attribute capacity;
+        private Attributes.Attribute capacity;
 
         public LoadInfo(Context context) {
             super(context);
         }
 
-        public void setCapacity(Attribute capacity) {
+        public void setCapacity(Attributes.Attribute capacity) {
             this.capacity = capacity;
         }
 

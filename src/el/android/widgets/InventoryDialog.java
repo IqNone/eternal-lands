@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import el.actor.Attribute;
+import el.actor.Attributes;
 import el.actor.Item;
 import el.android.R;
 
@@ -53,7 +53,7 @@ public class InventoryDialog extends Dialog implements Invalidateable{
         inventory.setItems(items);
     }
 
-    public void setCapacity(Attribute capacity) {
+    public void setCapacity(Attributes.Attribute capacity) {
         capacityInfo.setCapacity(capacity);
     }
 
@@ -70,13 +70,13 @@ public class InventoryDialog extends Dialog implements Invalidateable{
     }
 
     private static class LoadInfo extends TextView {
-        private Attribute capacity;
+        private Attributes.Attribute capacity;
 
         public LoadInfo(Context context) {
             super(context);
         }
 
-        public void setCapacity(Attribute capacity) {
+        public void setCapacity(Attributes.Attribute capacity) {
             this.capacity = capacity;
         }
 
