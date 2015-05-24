@@ -31,7 +31,7 @@ public class TextManager {
     public void resize(int width) {
         if(textLayout == null && width > 0) {
             TextPaint paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-            paint.setTextSize(20);
+            paint.setTextSize(15);
             textBuffer = new SpannableStringBuilder();
             textLayout = new DynamicLayout(textBuffer, paint, width, Layout.Alignment.ALIGN_NORMAL, 1, 0, false);
         }

@@ -1,3 +1,17 @@
+v0.9.2 : Helebek - pre release
+24 May 2015
+
+	1. 1.9.4 compatible with updated maps
+	2. #il command at login - https://github.com/IqNone/eternal-lands/issues/5
+	3. typing // autocompletes with last player from whom you got a PM
+	4. #calc can be used for simple calculations
+
+v0.9.1 : Helebek
+10 May 2015
+
+	1. 1.9.4 compatible (maps not updated)
+	2. Allows space between # and command
+	
 v0.9.0 : Helebek
 08 June 2014
 

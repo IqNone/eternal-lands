@@ -2,3 +2,4 @@ local.properties
 build.xml
 gen/
 project.properties
+.*
