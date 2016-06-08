@@ -7,10 +7,11 @@ import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import el.actor.Actor;
-import el.actor.Span;
 
 import java.util.List;
+
+import el.actor.Actor;
+import el.actor.Span;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;

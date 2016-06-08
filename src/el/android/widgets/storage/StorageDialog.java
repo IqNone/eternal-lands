@@ -10,10 +10,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ViewFlipper;
+
 import el.actor.Actor;
 import el.actor.Item;
 import el.android.R;
-import el.android.widgets.*;
+import el.android.widgets.Invalidateable;
+import el.android.widgets.Inventory;
+import el.android.widgets.ItemBag;
+import el.android.widgets.QuantitySelector;
+import el.android.widgets.ViewFlipperFixed;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;

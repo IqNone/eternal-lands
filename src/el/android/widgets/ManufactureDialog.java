@@ -8,6 +8,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import el.actor.Attributes;
 import el.actor.Item;
 import el.actor.Span;
@@ -134,6 +135,35 @@ public class ManufactureDialog extends Dialog implements Invalidateable{
         manufactureResult.setInventoryText(inventory_item_text);
     }
 
+    private static class LoadInfo extends TextView {
+        private Attributes.Attribute capacity;
+
+        public LoadInfo(Context context) {
+            super(context);
+        }
+
+        public void setCapacity(Attributes.Attribute capacity) {
+            this.capacity = capacity;
+        }
+
+        public void updateText() {
+            setText(getContext().getString(R.string.inv_capacity, capacity.current, capacity.base));
+        }
+    }
+
+    private static class ManufactureInfo extends TextView {
+        private Span ManufactureText;
+
+        public ManufactureInfo(Context context) { super(context); }
+
+        public void setInventoryText(Span ManufactureItemText) {this.ManufactureText = ManufactureItemText;}
+
+        public void updateText() {
+            setTextColor(Colors.COLORS[ManufactureText.color]);
+            setText(String.valueOf(ManufactureText.text));
+        }
+    }
+
     private class OnManufactureAction implements Manufacture.ManufactureActionCallback {
         @Override
         public void onItemClicked(int itemPos) {
@@ -152,41 +182,11 @@ public class ManufactureDialog extends Dialog implements Invalidateable{
 
         public void onManufactureItemClicked(int itemPos) {
             // When an item from manufacturing boxes is clicked remove the item
-            if( itemPos < 6) {
+            if (itemPos < 6) {
                 manufacture.remove_manufacture_item(itemPos);
             }
         }
 
-    }
-
-    private static class LoadInfo extends TextView {
-        private Attributes.Attribute capacity;
-
-        public LoadInfo(Context context) {
-            super(context);
-        }
-
-        public void setCapacity(Attributes.Attribute capacity) {
-            this.capacity = capacity;
-        }
-
-        public void updateText() {
-            setText(getContext().getString(R.string.inv_capacity, capacity.current, capacity.base));
-        }
-    }
-
-
-    private static class ManufactureInfo extends TextView {
-        private Span ManufactureText;
-
-        public ManufactureInfo(Context context) { super(context); }
-
-        public void setInventoryText(Span ManufactureItemText) {this.ManufactureText = ManufactureItemText;}
-
-        public void updateText() {
-            setTextColor(Colors.COLORS[ManufactureText.color]);
-            setText(String.valueOf(ManufactureText.text));
-        }
     }
 
     private class OnClearButtonClickListener implements View.OnClickListener {

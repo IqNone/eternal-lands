@@ -20,23 +20,31 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-import el.actor.Actor;
-import el.actor.Item;
-import el.actor.Span;
-import el.actor.Text;
-import el.android.assets.Assets;
-import el.android.widgets.*;
-import el.android.widgets.mapview.MapView;
-import el.android.widgets.storage.StorageDialog;
-import el.android.widgets.trade.TradeDialog;
-import el.client.Colors;
+
+import org.matheclipse.parser.client.eval.ComplexEvaluator;
+import org.matheclipse.parser.client.math.Complex;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.matheclipse.parser.client.eval.ComplexEvaluator;
-import org.matheclipse.parser.client.math.Complex;
+import el.actor.Actor;
+import el.actor.Item;
+import el.actor.Span;
+import el.actor.Text;
+import el.android.assets.Assets;
+import el.android.widgets.Commander;
+import el.android.widgets.ConsoleView;
+import el.android.widgets.ELProgressBar;
+import el.android.widgets.Invalidateable;
+import el.android.widgets.InventoryDialog;
+import el.android.widgets.ItemView;
+import el.android.widgets.ManufactureDialog;
+import el.android.widgets.PlayerStatsDialog;
+import el.android.widgets.mapview.MapView;
+import el.android.widgets.storage.StorageDialog;
+import el.android.widgets.trade.TradeDialog;
+import el.client.Colors;
 
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.LayoutParams;
@@ -64,6 +72,33 @@ public class Game extends GameRunner {
 
 	private Actor actor;
 	private ItemView[] fastInventory = new ItemView[4];
+	private long lastUpdate = new Date().getTime();
+	private Commander.CommandListener commandListener = new Commander.CommandListener() {
+		@Override
+		public void walkTo(int x, int y) {
+			mapView.setCanMovNotifier(CLIENT.walkTo(x, y));
+		}
+
+		@Override
+		public void harvest(int itemId) {
+			CLIENT.harvest(itemId);
+		}
+
+		@Override
+		public void enter(int entrableId) {
+			CLIENT.enter(entrableId);
+		}
+
+		@Override
+		public void touchActor(int actorId) {
+			CLIENT.touchActor(actorId);
+		}
+
+		@Override
+		public void tradeWith(int actorId) {
+			CLIENT.tradeWith(actorId);
+		}
+	};
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -150,8 +185,6 @@ public class Game extends GameRunner {
 							}
 						}).create();
 	}
-
-	private long lastUpdate = new Date().getTime();
 
 	@SuppressWarnings("SynchronizeOnNonFinalField")
 	@Override
@@ -456,33 +489,6 @@ public class Game extends GameRunner {
 					: R.drawable.console_view);
 		}
 	}
-
-	private Commander.CommandListener commandListener = new Commander.CommandListener() {
-		@Override
-		public void walkTo(int x, int y) {
-			mapView.setCanMovNotifier(CLIENT.walkTo(x, y));
-		}
-
-		@Override
-		public void harvest(int itemId) {
-			CLIENT.harvest(itemId);
-		}
-
-		@Override
-		public void enter(int entrableId) {
-			CLIENT.enter(entrableId);
-		}
-
-		@Override
-		public void touchActor(int actorId) {
-			CLIENT.touchActor(actorId);
-		}
-
-		@Override
-		public void tradeWith(int actorId) {
-			CLIENT.tradeWith(actorId);
-		}
-	};
 
 	private class OnManufactureButtonClickListener implements
 			View.OnClickListener {

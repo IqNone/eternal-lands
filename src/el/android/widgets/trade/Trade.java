@@ -2,6 +2,7 @@ package el.android.widgets.trade;
 
 import android.content.Context;
 import android.widget.LinearLayout;
+
 import el.actor.Actor;
 import el.android.widgets.ItemBag;
 

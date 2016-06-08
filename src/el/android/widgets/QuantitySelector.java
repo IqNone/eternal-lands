@@ -11,6 +11,7 @@ import android.text.TextPaint;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
 import el.android.R;
 
 public class QuantitySelector extends ViewGroup {

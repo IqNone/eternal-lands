@@ -5,11 +5,12 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+
+import java.util.Date;
+
 import el.actor.Actor;
 import el.android.GameMetadata;
 import el.android.assets.Assets;
-
-import java.util.Date;
 
 public class NotificationBar {
     private static final int ICON_SIZE_PX = 32;
@@ -34,6 +35,9 @@ public class NotificationBar {
     private Bitmap disconnected;
 
     private long movingNotificationRemaining = 0;
+    //use only 2 instances
+    private Rect src = new Rect();
+    private Rect dst = new Rect();
 
     public NotificationBar(Context context) {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -94,10 +98,6 @@ public class NotificationBar {
                 dst(left, height - PADDING - iconSizeDP, left + iconSizeDP, height - PADDING),
                 paint);
     }
-
-    //use only 2 instances
-    private Rect src = new Rect();
-    private Rect dst = new Rect();
 
     private Rect src(int left, int top, int right, int bottom) {
         src.set(left, top, right, bottom);

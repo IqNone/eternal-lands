@@ -7,15 +7,11 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.view.MotionEvent;
 import android.view.View;
+
 import el.actor.Item;
 import el.android.assets.Assets;
 
 public class Inventory extends View {
-    public static interface InventoryActionCallback {
-        public void onItemClicked(int itemPos);
-        public void onItemMoved(int itemPos, int toPos);
-    }
-
     private Paint itemPaint;
     private Paint cooldownPaint;
     private Paint equipmentPaint;
@@ -23,17 +19,15 @@ public class Inventory extends View {
     private Paint selectedPaint;
     private Paint moveOkPaint;
     private Paint moveBadPaint;
-
     private float cellWidth;
     private float cellHeight;
-
     private Item[] items;
     private int startPos;
     private int endPos;
-
     private InventoryActionCallback actionCallback;
-
     private boolean canMove = true;
+    private Rect src = new Rect();
+    private Rect dst = new Rect();
 
     public Inventory(Context context) {
         super(context);
@@ -132,9 +126,6 @@ public class Inventory extends View {
         }
     }
 
-    private Rect src = new Rect();
-    private Rect dst = new Rect();
-
     private void drawItemImage(Item item, float left, float top, Canvas canvas) {
         Assets.IconBitmap image = Assets.getItemImage(item.imageId);
 
@@ -168,6 +159,12 @@ public class Inventory extends View {
         float top = pos < 36 ? pos / 6 * cellHeight : ((pos - 36) / 2 + 1) * cellHeight;
 
         canvas.drawRect(left, top, left + cellWidth, top + cellHeight, paint);
+    }
+
+    public interface InventoryActionCallback {
+        void onItemClicked(int itemPos);
+
+        void onItemMoved(int itemPos, int toPos);
     }
 
     private class InventoryTouchListener implements OnTouchListener {

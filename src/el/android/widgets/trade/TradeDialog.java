@@ -4,14 +4,24 @@ import android.content.Context;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.ViewFlipper;
+
 import el.actor.Actor;
 import el.actor.Item;
 import el.android.R;
-import el.android.widgets.*;
+import el.android.widgets.Invalidateable;
+import el.android.widgets.Inventory;
+import el.android.widgets.ItemBag;
+import el.android.widgets.QuantitySelector;
+import el.android.widgets.ViewFlipperFixed;
 import el.android.widgets.storage.Storage;
 
-import static android.view.ViewGroup.LayoutParams.*;
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static el.android.GameMetadata.CLIENT;
 
 public class TradeDialog extends PopupWindow implements Invalidateable{

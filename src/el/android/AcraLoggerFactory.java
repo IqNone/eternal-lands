@@ -1,8 +1,9 @@
 package el.android;
 
+import org.acra.ACRA;
+
 import el.logging.Logger;
 import el.logging.LoggerFactory;
-import org.acra.ACRA;
 
 import static el.android.GameMetadata.CLIENT;
 

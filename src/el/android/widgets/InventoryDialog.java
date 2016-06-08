@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import el.actor.Attributes;
 import el.actor.Item;
 import el.android.R;
@@ -57,18 +58,6 @@ public class InventoryDialog extends Dialog implements Invalidateable{
         capacityInfo.setCapacity(capacity);
     }
 
-    private class OnInventoryAction implements Inventory.InventoryActionCallback {
-        @Override
-        public void onItemClicked(int itemPos) {
-            CLIENT.useItem(itemPos);
-        }
-
-        @Override
-        public void onItemMoved(int itemPos, int toPos) {
-            CLIENT.moveItemInInventory(itemPos, toPos);
-        }
-    }
-
     private static class LoadInfo extends TextView {
         private Attributes.Attribute capacity;
 
@@ -82,6 +71,18 @@ public class InventoryDialog extends Dialog implements Invalidateable{
 
         public void updateText() {
             setText(getContext().getString(R.string.inv_capacity, capacity.current, capacity.base));
+        }
+    }
+
+    private class OnInventoryAction implements Inventory.InventoryActionCallback {
+        @Override
+        public void onItemClicked(int itemPos) {
+            CLIENT.useItem(itemPos);
+        }
+
+        @Override
+        public void onItemMoved(int itemPos, int toPos) {
+            CLIENT.moveItemInInventory(itemPos, toPos);
         }
     }
 }

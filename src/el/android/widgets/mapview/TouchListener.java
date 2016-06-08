@@ -1,12 +1,13 @@
 package el.android.widgets.mapview;
 
 import android.view.MotionEvent;
+
+import java.util.Date;
+
 import el.actor.Actor;
 import el.actor.BaseActor;
 import el.android.widgets.Commander;
 import el.map.MapObject;
-
-import java.util.Date;
 
 import static java.lang.Math.abs;
 

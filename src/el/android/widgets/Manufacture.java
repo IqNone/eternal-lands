@@ -7,16 +7,12 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.view.MotionEvent;
 import android.view.View;
+
 import el.actor.Item;
 import el.android.assets.Assets;
 
 public class Manufacture extends View {
-    public static interface ManufactureActionCallback {
-        public void onItemClicked(int itemPos);
-        public void onItemLongClicked(int itemPos);
-        public void onManufactureItemClicked(int itemPos);
-    }
-
+    public Item[] manufacture_items = new Item[6];
     private Paint itemPaint;
     private Paint cooldownPaint;
     private Paint equipmentPaint;
@@ -29,10 +25,9 @@ public class Manufacture extends View {
     private int pos;
 
     private boolean recipe_ok = false;
-
-    public Item[] manufacture_items =  new Item[6];
-
     private ManufactureActionCallback actionCallback;
+    private Rect src = new Rect();
+    private Rect dst = new Rect();
 
     public Manufacture(Context context) {
         super(context);
@@ -128,7 +123,6 @@ public class Manufacture extends View {
         }
     }
 
-
     public void check_recipe(){
         // Implementing this whole thing might be easier with arraylist of items?
         int itemPos;
@@ -178,7 +172,6 @@ public class Manufacture extends View {
 
         setRecipe_ok(possible);
     }
-
 
     public void setActionCallback(ManufactureActionCallback actionCallback) {
         this.actionCallback = actionCallback;
@@ -249,9 +242,6 @@ public class Manufacture extends View {
 
     }
 
-    private Rect src = new Rect();
-    private Rect dst = new Rect();
-
     private void drawItemImage(Item item, float left, float top, Canvas canvas) {
         Assets.IconBitmap image = Assets.getItemImage(item.imageId);
 
@@ -271,7 +261,6 @@ public class Manufacture extends View {
         }
     }
 
-
     public boolean getRecipe_ok() {
         return recipe_ok;
     }
@@ -280,13 +269,19 @@ public class Manufacture extends View {
         this.recipe_ok = recipe_ok;
     }
 
+    public interface ManufactureActionCallback {
+        void onItemClicked(int itemPos);
 
+        void onItemLongClicked(int itemPos);
+
+        void onManufactureItemClicked(int itemPos);
+    }
 
     private class ManufactureTouchListener implements OnTouchListener {
-        private int startPos=-1;
-
         long event_start = 0;
         long event_time = 0;
+        private int startPos = -1;
+
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             switch (event.getAction()) {

@@ -1,13 +1,14 @@
 package el.android.release;
 
 import android.content.Context;
-import el.android.R;
-import el.utils.IOUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import el.android.R;
+import el.utils.IOUtils;
 
 public class ReleaseNotesService {
     private Context context;

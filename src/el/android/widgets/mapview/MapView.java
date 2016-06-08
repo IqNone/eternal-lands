@@ -2,12 +2,17 @@ package el.android.widgets.mapview;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.preference.PreferenceManager;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import el.actor.Actor;
 import el.actor.BaseActor;
 import el.actor.Span;
@@ -20,16 +25,17 @@ import el.logging.LoggerFactory;
 import el.map.MapObject;
 import us.gorges.android.GestureImageView;
 
-import static el.client.Colors.*;
+import static el.client.Colors.BLUE2;
+import static el.client.Colors.COLORS;
+import static el.client.Colors.GREEN1;
+import static el.client.Colors.GREY1;
+import static el.client.Colors.RED3;
 
 public class MapView extends GestureImageView implements View.OnTouchListener, Commander {
-    private static final Logger LOGGER = LoggerFactory.logger(MapView.class);
-
     public static final int ENTRABLE_SIZE = 5;
     public static final int HARVESTABLE_SIZE = 1;
-
     public static final int ACTOR_RADIUS_PX = 10;
-
+    private static final Logger LOGGER = LoggerFactory.logger(MapView.class);
     private float scale = 1;
 
     private Paint positionPaint;
@@ -49,6 +55,9 @@ public class MapView extends GestureImageView implements View.OnTouchListener, C
     private TextManager textManager = new TextManager();
     private TouchListener touchListener = new TouchListener();
     private NotificationBar notificationBar;
+    //use only 2 instances
+    private Rect src = new Rect();
+    private Rect dst = new Rect();
 
     public MapView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -110,7 +119,6 @@ public class MapView extends GestureImageView implements View.OnTouchListener, C
     public void setCommandListener(CommandListener listener) {
         touchListener.setCommandListener(listener);
     }
-
 
     public void setCanMovNotifier(boolean canMove) {
         notificationBar.showCanWalkNotification(canMove);
@@ -229,9 +237,6 @@ public class MapView extends GestureImageView implements View.OnTouchListener, C
     private boolean onScreen(float x, float y) {
         return x >= 0 && y >= 0 && x <= getWidth() && y <=  getHeight();
     }
-    //use only 2 instances
-    private Rect src = new Rect();
-    private Rect dst = new Rect();
 
     private Rect src(int left, int top, int right, int bottom) {
         src.set(left, top, right, bottom);

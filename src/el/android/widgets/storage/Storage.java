@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+
 import el.actor.Actor;
 import el.android.GameMetadata;
 import el.android.widgets.ItemBag;

@@ -6,12 +6,13 @@ import android.view.Gravity;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import el.actor.Item;
-import el.android.R;
-import el.android.widgets.ItemBag;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import el.actor.Item;
+import el.android.R;
+import el.android.widgets.ItemBag;
 
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 

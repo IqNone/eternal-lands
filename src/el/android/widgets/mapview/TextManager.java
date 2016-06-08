@@ -2,13 +2,18 @@ package el.android.widgets.mapview;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.text.*;
+import android.text.DynamicLayout;
+import android.text.Layout;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.TextPaint;
 import android.text.style.ForegroundColorSpan;
+
+import java.util.concurrent.TimeUnit;
+
 import el.actor.Actor;
 import el.actor.Span;
 import el.actor.Text;
-
-import java.util.concurrent.TimeUnit;
 
 public class TextManager {
     public static final int MAX_DISPLAYED_TEXT = 5;

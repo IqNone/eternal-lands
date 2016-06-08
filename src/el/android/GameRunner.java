@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
+
 import el.logging.Logger;
 
 import static android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN;
@@ -13,12 +14,34 @@ import static el.android.GameMetadata.CONNECTION;
 
 public abstract class GameRunner extends Activity {
     private static final Logger LOGGER = AndroidLoggerFactory.logger(GameRunner.class);
+    private final Handler handler = new Handler();
+    private volatile boolean isShowing;
+    private Runnable updateUICaller = new Runnable() {
+        @Override
+        public void run() {
+            updateUI();
+        }
+    };
+    private Runnable uiMainLoop = new Runnable() {
+        @Override
+        public void run() {
+            while (isShowing && CONNECTION.isConnected()) {
+                handler.post(updateUICaller);
+                safeSleep(100);
+            }
+            LOGGER.info("main loop finished");
+        }
+
+        private void safeSleep(int ms) {
+            try {
+                Thread.sleep(ms);
+            } catch (InterruptedException e) {
+                LOGGER.error("nasty interrupt exception while sleeping occurred", e);
+            }
+        }
+    };
 
     protected abstract void updateUI();
-
-    private final Handler handler = new Handler();
-
-    private volatile boolean isShowing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,30 +86,4 @@ public abstract class GameRunner extends Activity {
         CONNECTION = null;
         CLIENT = null;
     }
-
-    private Runnable uiMainLoop = new Runnable() {
-        @Override
-        public void run() {
-            while(isShowing && CONNECTION.isConnected()) {
-                handler.post(updateUICaller);
-                safeSleep(100);
-            }
-            LOGGER.info("main loop finished");
-        }
-
-        private void safeSleep(int ms) {
-            try {
-                Thread.sleep(ms);
-            } catch (InterruptedException e) {
-                LOGGER.error("nasty interrupt exception while sleeping occurred", e);
-            }
-        }
-    };
-
-    private Runnable updateUICaller = new Runnable() {
-        @Override
-        public void run() {
-            updateUI();
-        }
-    };
 }

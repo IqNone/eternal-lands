@@ -4,12 +4,14 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
+
 import com.android.vending.expansion.zipfile.APKExpansionSupport;
 import com.android.vending.expansion.zipfile.ZipResourceFile;
-import el.logging.Logger;
-import el.logging.LoggerFactory;
 
 import java.io.InputStream;
+
+import el.logging.Logger;
+import el.logging.LoggerFactory;
 
 public class ExternalStorageUtil {
     private static final Logger LOGGER = LoggerFactory.logger(ExternalStorageUtil.class);

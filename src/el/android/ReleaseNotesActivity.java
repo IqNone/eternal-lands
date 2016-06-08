@@ -3,6 +3,7 @@ package el.android;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
+
 import el.android.release.ReleaseNotesService;
 
 public class ReleaseNotesActivity extends Activity {

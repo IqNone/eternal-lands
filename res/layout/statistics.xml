@@ -6,830 +6,831 @@
 
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/BaseAttNameCol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:measureWithLargestChild="true"
         android:layout_alignParentLeft="true"
         android:gravity="left"
-        android:padding="5dp"
-        android:id="@+id/BaseAttNameCol">
+        android:measureWithLargestChild="true"
+        android:orientation="vertical"
+        android:padding="5dp">
 
         <TextView
+            android:id="@+id/basic_att_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/basic_attributes_title"
             android:textColor="#ffffff"
-            android:textSize="8dp"
-            android:id="@+id/basic_att_title" />
+            android:textSize="8sp" />
 
         <TextView
+            android:id="@+id/phy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/physique"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/phy" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/coord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/coordination"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/coord" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/rea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/reasoning"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/rea" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/wil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/will"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/wil" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/ins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/instinct"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/ins" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/vit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/vitality"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/vit" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textSize="7sp" />
 
             <TextView
+                android:id="@+id/cross_att_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cross_attributes_title"
             android:textColor="#ffff00"
-            android:textSize="8sp"
-            android:id="@+id/cross_att_title" />
+                android:textSize="8sp" />
 
         <TextView
+            android:id="@+id/might"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/might"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/might" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/matter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/matter"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/matter" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/toughness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toughness"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/toughness" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/charm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/charm"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/charm" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/reaction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/reaction"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/reaction" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/perception"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/perception"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/perception" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/rationality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rationality"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/rationality" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/dexterity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dexterity"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/dexterity" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/ethereality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ethereality"
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/ethereality" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder001"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder002"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/food"
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/food" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/material_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/material_points"
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/material_points" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/ethereal_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ethereal_points"
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/ethereal_points" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/action_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/action_points"
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/action_points" />
+            android:textSize="7sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/BaseAttValueCol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:measureWithLargestChild="true"
         android:layout_toRightOf="@id/BaseAttNameCol"
-        android:padding="5sp"
-        android:id="@+id/BaseAttValueCol">
+        android:measureWithLargestChild="true"
+        android:orientation="vertical"
+        android:padding="5sp">
 
         <TextView
+            android:id="@+id/place_holder003"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="8sp"
-            android:id="@+id/place_holder" />
+            android:textSize="8sp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/phy_value" />
-
-        <TextView
+            android:id="@+id/phy_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/coord_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/coord_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/rea_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/rea_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/wil_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/wil_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/ins_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/ins_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/vit_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/vit_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textColor="#ffffff"
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder004"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="#ffff00"
-            android:textSize="8sp"
-            android:id="@+id/place_holder" />
+            android:textSize="7sp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/might_value" />
-
-        <TextView
+            android:id="@+id/place_holder005"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/matter_value" />
+            android:textSize="8sp" />
 
         <TextView
+            android:id="@+id/might_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/toughness_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/matter_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/charm_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/toughness_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/reaction_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/charm_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/perception_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/reaction_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/rationality_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/perception_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/dexterity_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/rationality_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/ethereality_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/dexterity_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textColor="#ffff00"
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/ethereality_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textColor="#ffff00"
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder006"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp" />
+
+        <TextView
+            android:id="@+id/place_holder007"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="7sp" />
+
+        <TextView
+            android:id="@+id/food_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/food_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/material_points_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/material_points_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/ethereal_points_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/ethereal_points_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/action_points_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/action_points_value" />
+            android:textSize="7sp" />
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/Nexus_SkillNameCol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:measureWithLargestChild="true"
         android:layout_toRightOf="@id/BaseAttValueCol"
         android:gravity="left"
-        android:padding="5sp"
-        android:id="@+id/Nexus_SkillNameCol">
+        android:measureWithLargestChild="true"
+        android:orientation="vertical"
+        android:padding="5sp">
 
         <TextView
+            android:id="@+id/nexus_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nexus_attributes_title"
             android:textColor="#ffffff"
-            android:textSize="8sp"
-            android:id="@+id/nexus_title" />
+            android:textSize="8sp" />
 
         <TextView
+            android:id="@+id/human"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/human"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/human" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/animal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/animal"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/animal" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/vegetal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/vegetal"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/vegetal" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/inorganic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/inorganic"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/inorganic" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/artificial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/artificial"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/artificial" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/magic_nex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/magic_nex"
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/magic_nex" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder008"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textSize="7sp" />
 
 
         <TextView
+            android:id="@+id/skills_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/skill_attributes_title"
             android:textColor="#ffa500"
-            android:textSize="8sp"
-            android:id="@+id/skills_title" />
+            android:textSize="8sp" />
 
         <TextView
+            android:id="@+id/attack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/attack"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/attack" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/defense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/defense"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/defense" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/harvest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/harvest"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/harvest" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/alchemy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/alchemy"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/alchemy" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/magic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/magic_s"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/magic" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/potion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/potion"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/potion" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/summoning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/summoning"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/summoning" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/manufacturing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/manufacturing"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/manufacturing" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/crafting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/crafting"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/crafting" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/engineering"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/engineering"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/engineering" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/tailoring"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tailoring"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/tailoring" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/ranging"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ranging"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/ranging" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/overall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/overall"
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/overall" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder009"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/pickpoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pick_points"
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/pickpoints" />
+            android:textSize="7sp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/Nexus_SkillValCol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/Nexus_SkillNameCol"
         android:measureWithLargestChild="true"
-        android:layout_toRightOf="@id/Nexus_SkillNameCol"
-        android:padding="5sp"
-        android:id="@+id/Nexus_SkillValCol">
+        android:orientation="vertical"
+        android:padding="5sp">
 
         <TextView
+            android:id="@+id/place_holder010"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="8sp"
-            android:id="@+id/place_holder" />
+            android:textSize="8sp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/human_value" />
-
-        <TextView
+            android:id="@+id/human_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/animal_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/animal_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/vegetal_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/vegetal_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/inorganic_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/inorganic_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/artificial_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/artificial_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="7sp"
-            android:id="@+id/magic_nex_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/magic_nex_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="8sp"
-            android:id="@+id/place_holder" />
+            android:textColor="#ffffff"
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder011"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/place_holder012"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffff00"
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/attack_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/attack_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/defense_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/defense_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/harvest_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/harvest_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/alchemy_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/alchemy_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/magic_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/magic_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/potion_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/potion_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/summoning_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/summoning_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/manufacturing_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/manufacturing_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/crafting_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/crafting_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/engineering_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/engineering_value" />
+            android:textSize="7sp" />
         <TextView
+            android:id="@+id/tailoring_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/tailoring_value" />
+            android:textSize="7sp" />
         <TextView
+            android:id="@+id/ranging_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/ranging_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/overall_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#ffa500"
-            android:textSize="7sp"
-            android:id="@+id/overall_value" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/place_holder013"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="7sp"
-            android:id="@+id/place_holder" />
+            android:textSize="7sp" />
 
         <TextView
+            android:id="@+id/pickpoints_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#0000ff"
-            android:textSize="7sp"
-            android:id="@+id/pickpoints_value" />
+            android:textSize="7sp" />
     </LinearLayout>
 
 
     <LinearLayout
         android:id="@+id/footer"
-        android:background="@drawable/el_widget_skin"
-        android:padding="2sp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_below="@id/BaseAttNameCol"
+        android:background="@drawable/el_widget_skin"
         android:gravity="center_vertical"
-        android:layout_below="@id/BaseAttNameCol">
+        android:orientation="vertical"
+        android:padding="2sp">
 
         <TextView
+            android:id="@+id/researching"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Research"
             android:textColor="#ffffff"
-            android:textSize="12sp"
-            android:id="@+id/researching" />
+            android:textSize="12sp" />
 
         <el.android.widgets.ELProgressBar
             android:id="@+id/researchbar"
-            android:layout_marginLeft="0sp"
+            color="#FF0000"
             android:layout_width="fill_parent"
             android:layout_height="20dp"
-            color="#FF0000" />
+            android:layout_marginLeft="0sp" />
 
     </LinearLayout>
 

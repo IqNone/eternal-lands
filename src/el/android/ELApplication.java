@@ -1,6 +1,7 @@
 package el.android;
 
 import android.app.Application;
+
 import org.acra.ReportingInteractionMode;
 import org.acra.annotation.ReportsCrashes;
 

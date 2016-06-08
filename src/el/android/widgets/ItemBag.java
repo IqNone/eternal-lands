@@ -7,25 +7,20 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.view.MotionEvent;
 import android.view.View;
+
 import el.actor.Item;
 import el.android.assets.Assets;
 
 public class ItemBag extends View implements View.OnTouchListener {
-    public static interface ItemClickListener{
-        public void onItemClicked(Item item);
-    }
-
     protected Item items[];
-
     protected int rows = 6;
     protected int columns = 6;
-
     protected double cellSize;
-
     protected Paint strokePaint;
     protected Paint textPaint;
-
     private ItemClickListener clickListener;
+    private Rect src = new Rect();
+    private Rect dst = new Rect();
 
     public ItemBag(Context context) {
         super(context);
@@ -52,13 +47,13 @@ public class ItemBag extends View implements View.OnTouchListener {
         invalidate();
     }
 
+    public Item[] getItems() {
+        return items;
+    }
+
     public void setItems(Item items[]) {
         this.items = items;
         invalidate();
-    }
-
-    public Item[] getItems() {
-        return items;
     }
 
     @Override
@@ -100,9 +95,6 @@ public class ItemBag extends View implements View.OnTouchListener {
         }
     }
 
-    private Rect src = new Rect();
-    private Rect dst = new Rect();
-
     private void drawItemImage(Item item, float left, float top, Canvas canvas) {
         Assets.IconBitmap image = Assets.getItemImage(item.imageId);
 
@@ -137,5 +129,9 @@ public class ItemBag extends View implements View.OnTouchListener {
         }
 
         return true;
+    }
+
+    public interface ItemClickListener {
+        void onItemClicked(Item item);
     }
 }

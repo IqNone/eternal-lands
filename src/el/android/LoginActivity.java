@@ -9,10 +9,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import el.android.release.ReleaseNotesService;
-import el.logging.LoggerFactory;
+
 import org.acra.ACRA;
 import org.acra.sender.EmailIntentSender;
+
+import el.android.release.ReleaseNotesService;
+import el.logging.LoggerFactory;
 
 import static android.view.View.OnClickListener;
 import static el.android.GameMetadata.authenticateClient;
@@ -25,6 +27,58 @@ public class LoginActivity extends Activity {
     private EditText passwordText;
 
     private ImageView loginButton;
+    private OnClickListener ON_LOG_IN_CLICK = new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            String username = usernameText.getText().toString();
+            String password = passwordText.getText().toString();
+
+            if (username.length() > 0 && password.length() > 0) {
+                loginButton.setEnabled(false);
+                processLogin(username, password);
+            } else {
+                addCredentialsErrorMessages(username, password);
+            }
+        }
+
+        private void processLogin(String username, String password) {
+            loginButton.setEnabled(true);
+
+            if (!startUpServerConnection()) {
+                ((TextView) findViewById(R.id.loginError)).setText(getString(R.string.connect_to_server_error));
+                return;
+            }
+
+            if (!authenticateClient(username, password)) {
+                ((TextView) findViewById(R.id.loginError)).setText(getString(R.string.authenticate_error));
+                return;
+            }
+
+            Intent intent = new Intent(LoginActivity.this, Game.class);
+            startActivity(intent);
+        }
+
+        private void addCredentialsErrorMessages(String username, String password) {
+            if (username.length() == 0) {
+                usernameText.setError(getString(R.string.username_empty_error));
+            }
+            if (password.length() == 0) {
+                passwordText.setError(getString(R.string.password_empty_error));
+            }
+        }
+    };
+    private OnClickListener ON_SETTINGS_CLICK = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(LoginActivity.this, SettingsActivity.class));
+        }
+    };
+    private OnClickListener ON_READ_NOTES_CLICK = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(LoginActivity.this, ReleaseNotesActivity.class));
+        }
+    };
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,59 +137,4 @@ public class LoginActivity extends Activity {
     private boolean includeExtra(SharedPreferences settings) {
         return settings.getBoolean(SharedSettings.REPORTS_INCLUDE_EXTRA, false);
     }
-
-    private OnClickListener ON_LOG_IN_CLICK = new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            String username = usernameText.getText().toString();
-            String password = passwordText.getText().toString();
-
-            if(username.length() > 0 && password.length() > 0) {
-                loginButton.setEnabled(false);
-                processLogin(username, password);
-            } else {
-                addCredentialsErrorMessages(username, password);
-            }
-        }
-
-        private void processLogin(String username, String password) {
-            loginButton.setEnabled(true);
-
-            if(!startUpServerConnection()){
-                ((TextView) findViewById(R.id.loginError)).setText(getString(R.string.connect_to_server_error));
-                return;
-            }
-
-            if(!authenticateClient(username, password)) {
-                ((TextView) findViewById(R.id.loginError)).setText(getString(R.string.authenticate_error));
-                return;
-            }
-
-            Intent intent = new Intent(LoginActivity.this, Game.class);
-            startActivity(intent);
-        }
-
-        private void addCredentialsErrorMessages(String username, String password) {
-            if(username.length() == 0) {
-                usernameText.setError(getString(R.string.username_empty_error));
-            }
-            if(password.length() == 0) {
-                passwordText.setError(getString(R.string.password_empty_error));
-            }
-        }
-    };
-
-    private OnClickListener ON_SETTINGS_CLICK = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(LoginActivity.this, SettingsActivity.class));
-        }
-    };
-
-    private OnClickListener ON_READ_NOTES_CLICK = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(LoginActivity.this, ReleaseNotesActivity.class));
-        }
-    };
 }

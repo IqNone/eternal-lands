@@ -16,7 +16,7 @@ public class Assets {
     private static final int ITEM_SIZE = 51;
 
     private static AssetManager assetManager;
-    private static ConcurrentHashMap<Integer, Bitmap> itemsFiles = new ConcurrentHashMap<>(27);
+    private static ConcurrentHashMap<Integer, Bitmap> itemsFiles = new ConcurrentHashMap<Integer, Bitmap>(27);
 
     public static void setAssetManager(AssetManager am) {
         assetManager = am;
@@ -62,15 +62,14 @@ public class Assets {
     }
 
     public static class IconBitmap{
+        public Bitmap bitmap;
+        public int x;
+        public int y;
+        public int size = ITEM_SIZE;
         public IconBitmap(Bitmap bitmap, int x, int y) {
             this.bitmap = bitmap;
             this.x = x;
             this.y = y;
         }
-
-        public Bitmap bitmap;
-        public int x;
-        public int y;
-        public int size = ITEM_SIZE;
     }
 }

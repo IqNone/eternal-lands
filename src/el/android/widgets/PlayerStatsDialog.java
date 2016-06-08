@@ -5,15 +5,16 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
 import el.actor.Actor;
 import el.actor.Attributes;
 import el.android.R;
 
 public class PlayerStatsDialog extends Dialog implements Invalidateable{
-    private ELProgressBar researchBar;
-    private Actor actor;
     String[] book_list;
     View stats_layout;
+    private ELProgressBar researchBar;
+    private Actor actor;
 
     public PlayerStatsDialog(Context context) {
         super(context);
