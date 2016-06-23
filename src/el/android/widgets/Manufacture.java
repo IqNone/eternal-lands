@@ -22,7 +22,6 @@ public class Manufacture extends View {
     private float cellHeight;
 
     private Item[] items;
-    private int pos;
 
     private boolean recipe_ok = false;
     private ManufactureActionCallback actionCallback;
@@ -125,7 +124,7 @@ public class Manufacture extends View {
 
     public void check_recipe(){
         // Implementing this whole thing might be easier with arraylist of items?
-        int itemPos;
+        // int itemPos;
         int num_items = 0;
         setRecipe_ok(true);
 
@@ -180,7 +179,8 @@ public class Manufacture extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int width = MeasureSpec.getSize(widthMeasureSpec);
-        int height = width * 4 / 3;
+
+        int height = width / 8 * 7;
 
         setMeasuredDimension(width, height);
     }
@@ -189,8 +189,8 @@ public class Manufacture extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        cellHeight = getHeight() / 8;
-        cellWidth = getWidth() / 6;
+        cellWidth = getWidth() / 8; // make the cells look the same width as in the inventory
+        cellHeight = cellWidth;
 
         drawItemsImages(canvas);
         drawItemsGrid(canvas);
@@ -291,7 +291,7 @@ public class Manufacture extends View {
                 } break;
                 case MotionEvent.ACTION_UP: {
                     event_time = event.getEventTime() - event_start;
-                    pos = getInventoryPos(event);
+                    int pos = getInventoryPos(event);
                     // If the user starts clicking one item, and then drags the finger invalidate that action
                     // If down and up positions are at the same item, them send the action.
                     if(startPos == pos) {
@@ -338,7 +338,7 @@ public class Manufacture extends View {
             }else if(items[pos] != null && items[pos].quantity > 0){
                 // Adding item to manufacture pipe or using item
                 // If the item in inventory part of the manufacture window is clicked more than 1 second
-                // then send client the useitem message.
+                // then send client the use item message.
                 if(event_time < 1000) {
                     actionCallback.onItemClicked(pos);
                 }else {
